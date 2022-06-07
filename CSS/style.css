@@ -85,130 +85,136 @@ p {
     -webkit-text-fill-color: transparent;
   }
 }
-@keyframes chargemnent {
+@keyframes Chargemnent {
   0% {
     opacity: 0;
-    height: 0%;
   }
   10% {
     opacity: 0;
-    height: 0%;
   }
   20% {
     opacity: 0;
-    height: 0%;
   }
   30% {
     opacity: 0;
-    height: 0%;
   }
   40% {
     opacity: 0;
-    height: 0%;
   }
   50% {
     opacity: 0;
-    height: 0%;
   }
   60% {
     opacity: 0;
-    height: 0%;
   }
   70% {
     opacity: 0;
-    height: 0%;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
-    height: 100%;
   }
 }
-@keyframes dechargement {
+@keyframes Chargeur-point {
   0% {
     opacity: 1;
     transform: translateY(20px);
+    color: #FF79DA;
   }
   25% {
     opacity: 0;
     transform: translateY(0px);
+    color: #FF79DA;
   }
   50% {
     opacity: 1;
     transform: translateY(20px);
+    color: #FF79DA;
   }
   75% {
     opacity: 0;
     transform: translateY(0px);
+    color: #FF79DA;
   }
-  100% {
+  90% {
     opacity: 1;
     transform: translateY(20px);
+    color: #FF79DA;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0px);
+    color: transparent;
   }
 }
-.Dechargement {
+.Bloc__loader {
   display: flex;
   flex-direction: row;
-  animation: dechargement 2s 10ms infinite;
+  position: absolute;
+  z-index: -1;
 }
-.Dechargement span:nth-child(1) {
-  animation-delay: 1s;
+.Bloc__loader p:nth-child(1) {
+  animation-delay: 0.1s;
 }
-.Dechargement span:nth-child(2) {
-  animation-delay: 1.5s;
+.Bloc__loader p:nth-child(2) {
+  animation-delay: 0.3s;
 }
-.Dechargement span:nth-child(3) {
-  animation-delay: 2s;
+.Bloc__loader p:nth-child(3) {
+  animation-delay: 0.5s;
 }
-.Dechargement span:nth-child(4) {
-  animation-delay: 2.5s;
+.Bloc__loader p:nth-child(4) {
+  animation-delay: 0.7s;
 }
-.Dechargement span:nth-child(5) {
-  animation-delay: 3s;
+.Bloc__loader p:nth-child(5) {
+  animation-delay: 0.9s;
 }
-.Dechargement span:nth-child(6) {
-  animation-delay: 10s;
+.Bloc__loader p:nth-child(6) {
+  animation-delay: 1.1s;
 }
-.Dechargement .Dechargement__Point {
-  margin: 50px 10px 50px 10px;
-  color: #FF79DA;
+.Bloc__loader .Bloc__loader__Point {
+  margin: 10px 10px 10px 10px;
+  color: transparent;
   font-size: 60px;
   font-weight: bold;
+  animation: Chargeur-point 2.8s;
 }
 
 .Chargement {
-  animation: chargemnent 3000ms;
+  animation: Chargemnent 3s;
 }
-
-.Bloc-en-tete {
+.Chargement .Bloc-en-tete {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #FFFFFF;
   box-shadow: 0px 5px 0px whitesmoke;
 }
-.Bloc-en-tete .Bloc-en-tete__Image-logo {
+.Chargement .Bloc-en-tete .Bloc-en-tete__Image-logo {
   object-fit: cover;
   width: 60%;
   margin: 10px 0px 10px 0px;
 }
-
-.Bloc-localisation {
+.Chargement .Bloc-localisation {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40px;
   background-color: #D3D3D3;
 }
-.Bloc-localisation .Bloc-localisation__Icone-pin {
+.Chargement .Bloc-localisation .Bloc-localisation__Icone-pin {
   display: inline-block;
   padding: 5px;
 }
-.Bloc-localisation .Bloc-localisation__Texte {
+.Chargement .Bloc-localisation .Bloc-localisation__Texte {
   display: inline-block;
   padding: 5px;
 }
-
-.Bloc-trois {
+.Chargement .Bloc-trois {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -216,20 +222,20 @@ p {
   height: 300px;
   background-color: #F2F2F2;
 }
-.Bloc-trois .Bloc-trois__Texte-gras {
+.Chargement .Bloc-trois .Bloc-trois__Texte-gras {
   display: inline-block;
   text-align: center;
   font-weight: 700;
   font-size: 22px;
   padding: 10px;
 }
-.Bloc-trois .Bloc-trois__Texte {
+.Chargement .Bloc-trois .Bloc-trois__Texte {
   display: inline-block;
   text-align: center;
   font-size: 18px;
   padding: 10px;
 }
-.Bloc-trois .Bloc-trois__Bouton {
+.Chargement .Bloc-trois .Bloc-trois__Bouton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -242,15 +248,14 @@ p {
   margin: 20px;
   box-shadow: 6px 6px 6px grey;
 }
-.Bloc-trois .Bloc-trois__Bouton:hover {
+.Chargement .Bloc-trois .Bloc-trois__Bouton:hover {
   opacity: 0.7;
 }
-.Bloc-trois .Bloc-trois__Bouton .Bloc-trois__Bouton__Texte {
+.Chargement .Bloc-trois .Bloc-trois__Bouton .Bloc-trois__Bouton__Texte {
   font-size: 16px;
   color: #FFFFFF;
 }
-
-.Bloc-fonctionnement {
+.Chargement .Bloc-fonctionnement {
   background-color: #FFFFFF;
   height: 380px;
   display: flex;
@@ -258,33 +263,33 @@ p {
   justify-content: center;
 }
 @media screen and (min-width: 992px) {
-  .Bloc-fonctionnement {
+  .Chargement .Bloc-fonctionnement {
     height: 250px;
   }
 }
-.Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc {
+.Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc {
   margin: 0px 10px 0px 10px;
   width: 95%;
 }
 @media all and (min-width: 700px) and (max-width: 992px) {
-  .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Titre {
+  .Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Titre {
     display: flex;
     justify-content: center;
   }
 }
-.Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement {
+.Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media screen and (min-width: 992px) {
-  .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement {
+  .Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 }
-.Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton {
+.Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton {
   display: flex;
   align-items: center;
   border-style: none;
@@ -295,23 +300,23 @@ p {
   width: 90%;
   transition: background-color, 250ms;
 }
-.Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton:hover {
+.Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton:hover {
   background-color: #F1E5FF;
 }
-.Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton:hover i {
+.Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton:hover i {
   color: #9356DC;
 }
 @media screen and (min-width: 992px) {
-  .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton {
+  .Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton {
     width: 25%;
   }
 }
 @media all and (min-width: 700px) and (max-width: 992px) {
-  .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton {
+  .Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton {
     width: 50%;
   }
 }
-.Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Rond {
+.Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Rond {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -322,49 +327,48 @@ p {
   color: #FFFFFF;
   margin-left: -20px;
 }
-.Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Texte {
+.Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Texte {
   font-size: 16px;
   font-weight: 500;
   margin: 0px 10px 0px 20px;
 }
-.Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Icone {
+.Chargement .Bloc-fonctionnement .Bloc-fonctionnement__Sous-bloc .Bloc-fonctionnement__Sous-bloc__Agencement .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton .Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Icone {
   font-size: 19px;
   font-weight: 600;
   margin: 0px 10px 0px 20px;
 }
-
-.Bloc-restaurant {
+.Chargement .Bloc-restaurant {
   background-color: #F2F2F2;
   height: 1200px;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 992px) {
-  .Bloc-restaurant {
+  .Chargement .Bloc-restaurant {
     height: 350px;
   }
 }
 @media all and (min-width: 700px) and (max-width: 992px) {
-  .Bloc-restaurant {
+  .Chargement .Bloc-restaurant {
     height: 550px;
   }
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc {
   margin: 0 auto;
   margin: 0px 15px 0px 15px;
 }
 @media screen and (min-width: 700px) {
-  .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Titre {
+  .Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Titre {
     display: flex;
     justify-content: center;
   }
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 992px) {
-  .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement {
+  .Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -372,14 +376,14 @@ p {
   }
 }
 @media all and (min-width: 700px) and (max-width: 992px) {
-  .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement {
+  .Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
   }
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille {
   border-radius: 10px;
   background-color: #FFFFFF;
   margin: 10px 0px 10px 0px;
@@ -389,18 +393,18 @@ p {
   position: relative;
 }
 @media screen and (min-width: 992px) {
-  .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille {
+  .Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille {
     width: 20%;
     height: 200px;
   }
 }
 @media all and (min-width: 700px) and (max-width: 992px) {
-  .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille {
+  .Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille {
     width: 45%;
     height: 200px;
   }
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Nouveau {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Nouveau {
   background-color: #99E2D0;
   color: #41B295;
   font-weight: 500;
@@ -409,62 +413,61 @@ p {
   top: 10px;
   right: 10px;
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Image {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Image {
   width: 100%;
   height: 70%;
   object-fit: cover;
   border-radius: 10px 10px 0px 0px;
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte {
   display: flex;
   flex-direction: column;
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte__Sur-titre {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte__Sur-titre {
   font-weight: bold;
   color: #000000;
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte__Sous-titre {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte__Sous-titre {
   color: #000000;
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__icone {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__icone {
   display: flex;
   flex-direction: column;
   color: #000000;
 }
-.Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__icone i:hover {
+.Chargement .Bloc-restaurant .Bloc-restaurant__Sous-bloc .Bloc-restaurant__Sous-bloc__Agencement .Bloc-restaurant__Sous-bloc__Agencement__Pastille .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende .Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__icone i:hover {
   animation: coeur 2000ms;
   font-weight: bold;
   color: #FF79DA;
 }
-
-.Bloc-Noir {
+.Chargement .Bloc-Noir {
   background-color: #000000;
   padding: 5px 0px 25px 0px;
+  border: unset;
 }
-.Bloc-Noir .Bloc-Noir__Sous-bloc {
+.Chargement .Bloc-Noir .Bloc-Noir__Sous-bloc {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  width: 95%;
+  margin: 0px 15px 0px 15px;
 }
-.Bloc-Noir .Bloc-Noir__Sous-bloc .Bloc-Noir__Sous-bloc__Titre {
+.Chargement .Bloc-Noir .Bloc-Noir__Sous-bloc .Bloc-Noir__Sous-bloc__Titre {
   font-family: Shrikhand;
   font-size: medium;
   color: #FFFFFF;
   padding: 5px;
 }
-.Bloc-Noir .Bloc-Noir__Sous-bloc .Bloc-Noir__Sous-bloc__Texte {
+.Chargement .Bloc-Noir .Bloc-Noir__Sous-bloc .Bloc-Noir__Sous-bloc__Texte {
   color: #FFFFFF;
   padding: 5px;
   text-decoration: none;
 }
-.Bloc-Noir .Bloc-Noir__Sous-bloc .Bloc-Noir__Sous-bloc__Texte .Bloc-Noir__Sous-bloc__Texte__Icone {
+.Chargement .Bloc-Noir .Bloc-Noir__Sous-bloc .Bloc-Noir__Sous-bloc__Texte .Bloc-Noir__Sous-bloc__Texte__Icone {
   padding: 5px;
 }
 
@@ -590,7 +593,8 @@ p {
   .Bloc-gris .Bloc-gris__Sous-bloc .Bloc-gris__Sous-bloc__Menu .Bloc-gris__Sous-bloc__Menu__EPD {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 .Bloc-gris .Bloc-gris__Sous-bloc .Bloc-gris__Sous-bloc__Menu .Bloc-gris__Sous-bloc__Menu__EPD .Bloc-gris__Sous-bloc__Menu__EPD__MEF-Pastille {
@@ -626,6 +630,7 @@ p {
 @media all and (min-width: 700px) and (max-width: 992px) {
   .Bloc-gris .Bloc-gris__Sous-bloc .Bloc-gris__Sous-bloc__Menu .Bloc-gris__Sous-bloc__Menu__EPD .Bloc-gris__Sous-bloc__Menu__EPD__MEF-Pastille {
     width: 30%;
+    margin: 10px 10px 10px 10px;
   }
 }
 .Bloc-gris .Bloc-gris__Sous-bloc .Bloc-gris__Sous-bloc__Menu .Bloc-gris__Sous-bloc__Menu__EPD .Bloc-gris__Sous-bloc__Menu__EPD__MEF-Pastille .Bloc-gris__Sous-bloc__Menu__EPD__MEF-Pastille__Agencement-texte {
@@ -692,7 +697,9 @@ p {
   justify-content: center;
 }
 .Bloc-gris .Bloc-gris__Sous-bloc .Bloc-gris__Sous-bloc__Bloc-bouton .Bloc-gris__Sous-bloc__Bloc-bouton__MEF-Bouton {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 30px;
   border-style: none;
   background-color: #FF79DA;
@@ -718,12 +725,12 @@ p {
 
 .Bloc-Noir {
   background-color: #000000;
+  padding: 5px 0px 25px 0px;
 }
 .Bloc-Noir .Bloc-Noir__Sous-bloc {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  width: 95%;
+  margin: 0px 15px 0px 15px;
 }
 .Bloc-Noir .Bloc-Noir__Sous-bloc .Bloc-Noir__Sous-bloc__Titre {
   font-family: Shrikhand;

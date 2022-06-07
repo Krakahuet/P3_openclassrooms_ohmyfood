@@ -85,378 +85,357 @@ p {
 		-webkit-text-fill-color: transparent;
 	}
 }
-@keyframes chargemnent {
-	0% {
-		opacity: 0;
-		height: 0%;
-		
-	}
-	10% {
-		opacity: 0;
-		height: 0%;
-		
-	}
-	20% {
-		opacity: 0;
-		height: 0%;
-		
-	}
-	30% {
-		opacity: 0;
-		height: 0%;
-		
-	}
-	40% {
-		opacity: 0;
-		height: 0%;
-		
-	}
-	50% {
-		opacity: 0;
-		height: 0%;
-		
-	}
-	60% {
-		opacity: 0;
-		height: 0%;
-		
-	}
-	70% {
-		opacity: 0;
-		height: 0%;
-		
-	}
-	100% {
-		opacity: 1;
-		height: 100%
-	}
+@keyframes Chargemnent {
+	0% {opacity: 0;}
+	10% {opacity: 0;}
+	20% {opacity: 0;}
+	30% {opacity: 0;}
+	40% {opacity: 0;}
+	50% {opacity: 0;}
+	60% {opacity: 0;}
+	70% {opacity: 0;}
+	80% {opacity: 0;}
+	90% {opacity: 0;}
+	100% {opacity: 1;}
 }
 
-@keyframes dechargement {
+@keyframes Chargeur-point {
 	0% {
 		opacity: 1;
-		transform: translateY(20px)
+		transform: translateY(20px);
+		color: #FF79DA;
 	}
 	25% {
 		opacity: 0;
-		transform: translateY(0px)
+		transform: translateY(0px);
+		color: #FF79DA;
 	}
 	50% {
 		opacity: 1;
-		transform: translateY(20px)
+		transform: translateY(20px);
+		color: #FF79DA;
 	}
 	75% {
 		opacity: 0;
-		transform: translateY(0px)
+		transform: translateY(0px);
+		color: #FF79DA;
+	}
+	90% {
+		opacity: 1;
+		transform: translateY(20px);
+		color: #FF79DA;
 	}
 	100% {
-		opacity: 1;
-		transform: translateY(20px)
-		
+		opacity: 0;
+		transform: translateY(0px);
+		color: transparent;
 	}
 }
 
-.Dechargement {
+.Bloc__loader {
 	display: flex;
 	flex-direction: row;
-	animation: dechargement 2s 10ms infinite;
-	span:nth-child(1){
-		animation-delay: 1s;
+	position: absolute;
+	z-index:-1;
+	p:nth-child(1){
+		animation-delay: 0.1s;
 	}
-	span:nth-child(2){
-		animation-delay: 1.5s;
+	p:nth-child(2){
+		animation-delay: 0.3s;
 	}
-	span:nth-child(3){
-		animation-delay: 2s;
+	p:nth-child(3){
+		animation-delay: 0.5s;
 	}
-	span:nth-child(4){
-		animation-delay: 2.5s;
+	p:nth-child(4){
+		animation-delay: 0.7s;
 	}
-	span:nth-child(5){
-		animation-delay: 3s;
+	p:nth-child(5){
+		animation-delay: 0.9s;
 	}
-	span:nth-child(6){
-		animation-delay: 10s;
+	p:nth-child(6){
+		animation-delay: 1.1s;
 	}
-	.Dechargement__Point {
-		margin: 50px 10px 50px 10px;
-		color: #FF79DA;
+	.Bloc__loader__Point {
+		margin: 10px 10px 10px 10px;
+		color: transparent;
 		font-size: 60px;
-		font-weight: bold	
+		font-weight: bold;
+		animation: Chargeur-point 2.8s;
 	}
 }
+
 .Chargement {
-	animation: chargemnent 3000ms;
-}
+	animation: Chargemnent 3s;
+	
+	.Bloc-en-tete {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #FFFFFF;
+		box-shadow: 0px 5px 0px whitesmoke;
+		.Bloc-en-tete__Image-logo {
+			object-fit: cover;
+			width: 60%;
+			margin: 10px 0px 10px 0px;
+		}
+	}
 
-.Bloc-en-tete {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #FFFFFF;
-	box-shadow: 0px 5px 0px whitesmoke;
-	.Bloc-en-tete__Image-logo {
-		object-fit: cover;
-		width: 60%;
-		margin: 10px 0px 10px 0px;
-	}
-}
-
-.Bloc-localisation {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 40px;
-	background-color: #D3D3D3;
-	.Bloc-localisation__Icone-pin {
-		display: inline-block;
-		padding: 5px;
-	}
-&
-	.Bloc-localisation__Texte {
-		display: inline-block;
-		padding: 5px;
-	}
-}
-
-.Bloc-trois {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 300px;
-	background-color: #F2F2F2;
-	.Bloc-trois__Texte-gras {
-		display: inline-block;
-		text-align: center;
-		font-weight: 700;
-		font-size: 22px;
-		padding: 10px;
-	}
-	.Bloc-trois__Texte {
-		display: inline-block;
-		text-align: center;
-		font-size: 18px;
-		padding: 10px;
-	}
-	.Bloc-trois__Bouton {
+	.Bloc-localisation {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 30px;
-		border-style: none;
-		background: linear-gradient(174deg, #ff79da 6%, #9356dc 94%);
-		transition : opacity 250ms;
-		&:hover{
-			opacity : 0.7;
+		height: 40px;
+		background-color: #D3D3D3;
+		.Bloc-localisation__Icone-pin {
+			display: inline-block;
+			padding: 5px;
 		}
-		height: 55px;
-		width: 65%;
-		margin: 20px;
-		box-shadow: 6px 6px 6px grey;
-		.Bloc-trois__Bouton__Texte {
-			font-size: 16px;
-			color: #FFFFFF;
+	&
+		.Bloc-localisation__Texte {
+			display: inline-block;
+			padding: 5px;
 		}
 	}
-}
 
-.Bloc-fonctionnement {
-	background-color: #FFFFFF;
-	height: 380px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	@media screen and (min-width: 992px) {	
-		height: 250px;
-	}
-	.Bloc-fonctionnement__Sous-bloc {
-		margin: 0px 10px 0px 10px;
-		width: 95%;
-		.Bloc-fonctionnement__Sous-bloc__Titre {
-			@media all and (min-width: 700px) and (max-width: 992px) {	
-				display: flex;
-				justify-content: center;
-			}
-		}
-		.Bloc-fonctionnement__Sous-bloc__Agencement {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			@media screen and (min-width: 992px) {	
-				display: flex;
-				flex-direction: row;
-				justify-content: space-around;
-			}
-			.Bloc-fonctionnement__Sous-bloc__Agencement__Bouton {
-				display: flex;
-				align-items: center;
-				border-style: none;
-				border-radius: 20px;
-				height: 75px;
-				box-shadow: 6px 6px 6px grey;
-				margin: 10px 0px;
-				width: 90%;	
-				transition : background-color, 250ms;
-				&:hover {
-					background-color : #F1E5FF;
-					i {
-						color: #9356DC;
-					}
-				}
-				@media screen and (min-width: 992px) {	
-					width: 25%;
-				}
-				@media all and (min-width: 700px) and (max-width: 992px) {	
-					width: 50%;	
-				}
-				.Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Rond {
-					display: flex;
-					align-items: center;
-					justify-content: space-around;
-					width: 28px;
-					height: 28px;
-					border-radius: 20px;
-					background: #9356DC;
-					color: #FFFFFF;
-					margin-left: -20px;
-				}
-				.Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Texte {
-					font-size: 16px;
-					font-weight: 500;
-					margin: 0px 10px 0px 20px;
-				}
-				.Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Icone {
-					font-size: 19px;
-					font-weight: 600;
-					margin: 0px 10px 0px 20px;
-				}
-			}
-		}
-	}
-}
-
-.Bloc-restaurant {
-	background-color: #F2F2F2;
-	height: 1200px;
-	display: flex;
-	flex-direction: column;
-	@media screen and (min-width: 992px) {	
-		height: 350px;
-	}
-	@media all and (min-width: 700px) and (max-width: 992px) {	
-		height: 550px;
-	}
-	.Bloc-restaurant__Sous-bloc {
-		margin: 0 auto;
-		margin: 0px 15px 0px 15px;
-		.Bloc-restaurant__Sous-bloc__Titre {
-			@media screen and (min-width: 700px) {	
-				display: flex;
-				justify-content: center;
-			}
-		}
-		.Bloc-restaurant__Sous-bloc__Agencement {
-			display: flex;
-			flex-direction: column;
-			@media screen and (min-width: 992px) {	
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				flex-wrap: wrap;
-			}
-			@media all and (min-width: 700px) and (max-width: 992px) {	
-				display: flex;
-				flex-direction: row;
-				justify-content: space-around;
-				flex-wrap: wrap;
-			}
-			.Bloc-restaurant__Sous-bloc__Agencement__Pastille {
-				border-radius: 10px;
-				background-color: #FFFFFF;
-				margin: 10px 0px 10px 0px;
-				height: 250px;
-				box-shadow: 6px 6px 6px grey;
-				text-decoration: none;
-				position: relative;
-				@media screen and (min-width: 992px) {	
-					width: 20%;
-					height: 200px;
-				}
-				@media all and (min-width: 700px) and (max-width: 992px) {	
-					width: 45%;
-					height: 200px;
-				}
-				.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Nouveau {
-					background-color: #99E2D0;
-					color: #41B295;
-					font-weight: 500;
-					padding: 5px 8px 5px 8px;
-					position: absolute;
-					top: 10px;
-					right: 10px;
-				}	
-				.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Image {
-					width: 100%;
-					height: 70%;
-					object-fit: cover;
-					border-radius: 10px 10px 0px 0px;
-				}
-				.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-					padding: 10px;
-					.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte {
-						display: flex;
-						flex-direction: column;
-						.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte__Sur-titre {
-							font-weight: bold;
-							color: #000000;
-						}
-						.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte__Sous-titre {
-							color: #000000;
-						}
-					}
-					.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__icone {
-						display: flex;
-						flex-direction: column;
-						color: #000000;
-						i:hover{
-							animation: coeur 2000ms;
-							font-weight: bold;
-							color:#FF79DA;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-.Bloc-Noir {
-	background-color: #000000;	
-	padding: 5px 0px 25px 0px;
-	.Bloc-Noir__Sous-bloc {
+	.Bloc-trois {
 		display: flex;
 		flex-direction: column;
-		margin: 0 auto;
-		width: 95%;
-		.Bloc-Noir__Sous-bloc__Titre {
-			font-family: Shrikhand;
-			font-size: medium;
-			color: #FFFFFF;
-			padding: 5px;
+		justify-content: center;
+		align-items: center;
+		height: 300px;
+		background-color: #F2F2F2;
+		.Bloc-trois__Texte-gras {
+			display: inline-block;
+			text-align: center;
+			font-weight: 700;
+			font-size: 22px;
+			padding: 10px;
 		}
-		.Bloc-Noir__Sous-bloc__Texte {
-			color: #FFFFFF;
-			padding: 5px;
-			text-decoration: none;
-			.Bloc-Noir__Sous-bloc__Texte__Icone{
+		.Bloc-trois__Texte {
+			display: inline-block;
+			text-align: center;
+			font-size: 18px;
+			padding: 10px;
+		}
+		.Bloc-trois__Bouton {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 30px;
+			border-style: none;
+			background: linear-gradient(174deg, #ff79da 6%, #9356dc 94%);
+			transition : opacity 250ms;
+			&:hover{
+				opacity : 0.7;
+			}
+			height: 55px;
+			width: 65%;
+			margin: 20px;
+			box-shadow: 6px 6px 6px grey;
+			.Bloc-trois__Bouton__Texte {
+				font-size: 16px;
+				color: #FFFFFF;
+			}
+		}
+	}
+
+	.Bloc-fonctionnement {
+		background-color: #FFFFFF;
+		height: 380px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media screen and (min-width: 992px) {	
+			height: 250px;
+		}
+		.Bloc-fonctionnement__Sous-bloc {
+			margin: 0px 10px 0px 10px;
+			width: 95%;
+			.Bloc-fonctionnement__Sous-bloc__Titre {
+				@media all and (min-width: 700px) and (max-width: 992px) {	
+					display: flex;
+					justify-content: center;
+				}
+			}
+			.Bloc-fonctionnement__Sous-bloc__Agencement {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				@media screen and (min-width: 992px) {	
+					display: flex;
+					flex-direction: row;
+					justify-content: space-around;
+				}
+				.Bloc-fonctionnement__Sous-bloc__Agencement__Bouton {
+					display: flex;
+					align-items: center;
+					border-style: none;
+					border-radius: 20px;
+					height: 75px;
+					box-shadow: 6px 6px 6px grey;
+					margin: 10px 0px;
+					width: 90%;	
+					transition : background-color, 250ms;
+					&:hover {
+						background-color : #F1E5FF;
+						i {
+							color: #9356DC;
+						}
+					}
+					@media screen and (min-width: 992px) {	
+						width: 25%;
+					}
+					@media all and (min-width: 700px) and (max-width: 992px) {	
+						width: 50%;	
+					}
+					.Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Rond {
+						display: flex;
+						align-items: center;
+						justify-content: space-around;
+						width: 28px;
+						height: 28px;
+						border-radius: 20px;
+						background: #9356DC;
+						color: #FFFFFF;
+						margin-left: -20px;
+					}
+					.Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Texte {
+						font-size: 16px;
+						font-weight: 500;
+						margin: 0px 10px 0px 20px;
+					}
+					.Bloc-fonctionnement__Sous-bloc__Agencement__Bouton__Icone {
+						font-size: 19px;
+						font-weight: 600;
+						margin: 0px 10px 0px 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.Bloc-restaurant {
+		background-color: #F2F2F2;
+		height: 1200px;
+		display: flex;
+		flex-direction: column;
+		@media screen and (min-width: 992px) {	
+			height: 350px;
+		}
+		@media all and (min-width: 700px) and (max-width: 992px) {	
+			height: 550px;
+		}
+		.Bloc-restaurant__Sous-bloc {
+			margin: 0 auto;
+			margin: 0px 15px 0px 15px;
+			.Bloc-restaurant__Sous-bloc__Titre {
+				@media screen and (min-width: 700px) {	
+					display: flex;
+					justify-content: center;
+				}
+			}
+			.Bloc-restaurant__Sous-bloc__Agencement {
+				display: flex;
+				flex-direction: column;
+				@media screen and (min-width: 992px) {	
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					flex-wrap: wrap;
+				}
+				@media all and (min-width: 700px) and (max-width: 992px) {	
+					display: flex;
+					flex-direction: row;
+					justify-content: space-around;
+					flex-wrap: wrap;
+				}
+				.Bloc-restaurant__Sous-bloc__Agencement__Pastille {
+					border-radius: 10px;
+					background-color: #FFFFFF;
+					margin: 10px 0px 10px 0px;
+					height: 250px;
+					box-shadow: 6px 6px 6px grey;
+					text-decoration: none;
+					position: relative;
+					
+					@media screen and (min-width: 992px) {	
+						width: 20%;
+						height: 200px;
+					}
+					@media all and (min-width: 700px) and (max-width: 992px) {	
+						width: 45%;
+						height: 200px;
+					}
+					.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Nouveau {
+						background-color: #99E2D0;
+						color: #41B295;
+						font-weight: 500;
+						padding: 5px 8px 5px 8px;
+						position: absolute;
+						top: 10px;
+						right: 10px;
+					}	
+					.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Image {
+						width: 100%;
+						height: 70%;
+						object-fit: cover;
+						border-radius: 10px 10px 0px 0px;
+					}
+					.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						padding: 10px;
+						.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte {
+							display: flex;
+							flex-direction: column;
+							.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte__Sur-titre {
+								font-weight: bold;
+								color: #000000;
+							}
+							.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__Texte__Sous-titre {
+								color: #000000;
+							}
+						}
+						.Bloc-restaurant__Sous-bloc__Agencement__Pastille__Legende__icone {
+							display: flex;
+							flex-direction: column;
+							color: #000000;
+							i:hover{
+								animation: coeur 2000ms;
+								font-weight: bold;
+								color:#FF79DA;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.Bloc-Noir {
+		background-color: #000000;	
+		padding: 5px 0px 25px 0px;
+		border: unset;
+		.Bloc-Noir__Sous-bloc {
+			display: flex;
+			flex-direction: column;
+			margin: 0px 15px 0px 15px;
+			.Bloc-Noir__Sous-bloc__Titre {
+				font-family: Shrikhand;
+				font-size: medium;
+				color: #FFFFFF;
 				padding: 5px;
+			}
+			.Bloc-Noir__Sous-bloc__Texte {
+				color: #FFFFFF;
+				padding: 5px;
+				text-decoration: none;
+				.Bloc-Noir__Sous-bloc__Texte__Icone{
+					padding: 5px;
+				}
 			}
 		}
 	}
 }
-
 

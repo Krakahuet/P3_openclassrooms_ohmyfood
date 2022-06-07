@@ -106,7 +106,8 @@ p {
 				@media all and (min-width: 700px) and (max-width: 992px) {
 					display: flex;
 					flex-direction: row;
-					justify-content: space-around;
+					flex-wrap: wrap;
+					justify-content: flex-start;
 				}
 				.Bloc-gris__Sous-bloc__Menu__EPD__MEF-Pastille {
 					height: 50px;
@@ -137,6 +138,7 @@ p {
 					}
 					@media all and (min-width: 700px) and (max-width: 992px) {
 						width: 30%;
+						margin: 10px 10px 10px 10px;
 					}
 					.Bloc-gris__Sous-bloc__Menu__EPD__MEF-Pastille__Agencement-texte {
 						display: flex;
@@ -204,7 +206,9 @@ p {
 			display: flex;
 			justify-content: center;
 			.Bloc-gris__Sous-bloc__Bloc-bouton__MEF-Bouton {
-				display: inline-block;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				border-radius: 30px;
 				border-style: none;
 				background-color: #FF79DA;
@@ -234,11 +238,11 @@ p {
 
 .Bloc-Noir {
 	background-color: #000000;
+	padding: 5px 0px 25px 0px;
 	.Bloc-Noir__Sous-bloc {
 		display: flex;
 		flex-direction: column;
-		margin: 0 auto;
-		width: 95%;
+		margin: 0px 15px 0px 15px;
 		.Bloc-Noir__Sous-bloc__Titre {
 			font-family: Shrikhand;
 			font-size: medium;
